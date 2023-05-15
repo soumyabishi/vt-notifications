@@ -10,6 +10,7 @@ export default {
     Vue.component('notification', VTNotification)
     Vue.component('notificationGroup', VTNotificationGroup)
     Vue.prototype.$notify = (data, timeout) => methods.notify(data, timeout)
+    Vue.prototype.$removeNotify = (id) => methods.removeNotification(id)
     installed = true
   }
 }

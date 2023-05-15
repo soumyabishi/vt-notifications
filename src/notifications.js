@@ -10,12 +10,18 @@ const generateId = () => {
 }
 export const methods = {
   notify(notification, timeout) {
+
     notification.id = generateId()
-    notification.group = notification.group || ""; // add default group
-    state.notifications.push(notification);
-    setTimeout(() => {
-      this.removeNotification(notification.id)
-    }, timeout || 3000) // default time 3s
+    state.notifications.push(notification)
+
+    notification.group= notification.group || ""
+
+    if (timeout) {
+      setTimeout(() => {
+        this.removeNotification(notification.id)
+      }, timeout || 3000)
+    }
+    return notification.id
   },
   removeNotification(id) {
     const found = state.notifications.findIndex((n) => n.id === id);
