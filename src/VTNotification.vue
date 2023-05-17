@@ -19,7 +19,7 @@ export default {
           enterClass:
             "translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-4",
           enterToClass: "translate-y-0 opacity-100 sm:translate-x-0",
-          leaveActiveClass: "transition ease-in duration-500",
+          leaveActiveClass: "transition ease-in duration-200",
           leaveClass: "opacity-100",
           leaveToClass: "opacity-0",
           moveClass: "transition duration-500",
