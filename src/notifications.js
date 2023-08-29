@@ -28,5 +28,19 @@ export const methods = {
     if (found >= 0) {
       state.notifications.splice(found, 1);
     }
+  },
+  updateNotification(id, notification, timeout) {
+    const found = state.notifications.findIndex((n) => n.id === id);
+    const notificationObject = {...notification, id:  id}
+    if (found >= 0) {
+          for (let key in notificationObject) {
+              state.notifications[found][key] = notificationObject[key];
+          }
+    }
+    if (timeout) {
+       setTimeout(() => {
+         this.removeNotification(id)
+       }, timeout || 3000)
+    }
   }
 };

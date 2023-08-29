@@ -1,5 +1,5 @@
 {
-  "name": "vt-notifications",
+  "name": "tidyhire-notify",
   "description": "A headless vue notification library to use with tailwind",
   "version": "0.4.1",
   "author": "sansil",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sansil/vt-notifications.git"
+    "url": "git+https://github.com/sansil/vt-notifications.git"
   },
   "bugs": {
     "url": "https://github.com/sansil/vt-notifications/issues"
@@ -37,5 +37,9 @@
     "notifications",
     "toast"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/sansil/vt-notifications#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
